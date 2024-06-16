@@ -1,5 +1,4 @@
 fn main() {
-
     mut_test();
 
     number_test1();
@@ -27,7 +26,6 @@ fn number_test1() {
     let e: u8 = b'A';
     println!("{e}");
 
-    
     // let a: u32 = 1_234_567;
     // let a1 = 1_234_567u32;
     // let a2 = 1_234_567_u32;
@@ -152,14 +150,4 @@ fn slice_test() {
     println!("{:?}", &v[0..2]);
     println!("{:?}", &a[0..]);
     println!("{:?}", &sv[1..3]);
-}
-
-#[test]
-fn str_test() {
-    let s6 = r###"
-    This raw string starts width 'r###"'
-    Therefore it does not end until we reach a quote mark ('"')
-    followed immediately by three pound signs ('###'):
-"###;
-    println!("{s6}");
 }
