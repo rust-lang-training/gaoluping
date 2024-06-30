@@ -22,12 +22,14 @@ fn main() {
 }
 
 
-fn gcd(a: u32, b: u32) -> u32 {
+fn gcd(mut a: u32, mut b: u32) -> u32 {
     if a < b {
         return gcd(b, a);
     }
-    if a % b == 0 {
-        return b;
+    while b > 0 {
+        let t = a % b;
+        a = b;
+        b = t;
     }
-    return gcd(b, a % b);
+    a
 }
